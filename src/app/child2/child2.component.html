@@ -1,0 +1,14 @@
+<h3>Cart</h3>
+
+<div *ngFor="let fruit of carts | keyvalue">
+  <table *ngIf="fruit.value >0 "  border="1px">
+    <tr>
+      <td>
+        <img src="assets/{{fruit.key}}.jpeg" width=150px>
+      </td>
+      <td *ngIf="fruit.value>0">Quantity: {{fruit.value}}</td>
+      <button (click)="child2remove(fruit.key)"> Remove </button>
+    </tr>
+  </table>
+</div>
+<hr>

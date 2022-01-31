@@ -1,0 +1,16 @@
+<h3>Inventory</h3>
+
+<div>
+  <table *ngFor="let fruit of cartsmap | keyvalue" border="1px">
+    <tr>
+      <td>
+        <img src="assets/{{fruit.key}}.jpeg" width=150px>
+      </td>
+      <td> {{fruit.key}}</td>
+      <td>
+        <button (click)="addtocart(fruit.key)"> Add </button>
+      </td>
+    </tr>
+  </table>
+</div>
+
